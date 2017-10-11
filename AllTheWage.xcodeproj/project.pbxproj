@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B94294ED1F8D1D7200F72AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94294EC1F8D1D7200F72AD4 /* AppDelegate.swift */; };
+		B94294EF1F8D1D7200F72AD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94294EE1F8D1D7200F72AD4 /* ViewController.swift */; };
+		B94294F21F8D1D7200F72AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94294F01F8D1D7200F72AD4 /* Main.storyboard */; };
+		B94294F41F8D1D7200F72AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94294F31F8D1D7200F72AD4 /* Assets.xcassets */; };
+		B94294F71F8D1D7200F72AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94294F51F8D1D7200F72AD4 /* LaunchScreen.storyboard */; };
+		B94295021F8D1D7200F72AD4 /* AllTheWageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94295011F8D1D7200F72AD4 /* AllTheWageTests.swift */; };
+		B942950D1F8D1D7200F72AD4 /* AllTheWageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B942950C1F8D1D7200F72AD4 /* AllTheWageUITests.swift */; };
+		B942951D1F8D1EEE00F72AD4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B942951C1F8D1EEE00F72AD4 /* SWRevealViewController.m */; };
+		B942951F1F8D28E500F72AD4 /* EmployeeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B942951E1F8D28E500F72AD4 /* EmployeeTabView.swift */; };
+		B94295211F8D292C00F72AD4 /* PaycheckTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94295201F8D292C00F72AD4 /* PaycheckTabView.swift */; };
+		B94295231F8D293E00F72AD4 /* HelpTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94295221F8D293E00F72AD4 /* HelpTabView.swift */; };
+		B94295251F8D296F00F72AD4 /* ForumTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94295241F8D296F00F72AD4 /* ForumTabView.swift */; };
+		B94295271F8D299D00F72AD4 /* PayRateTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94295261F8D299D00F72AD4 /* PayRateTabView.swift */; };
+		B94295291F8D29CA00F72AD4 /* HoursTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94295281F8D29CA00F72AD4 /* HoursTabView.swift */; };
+		B94D0BFB1F8D3A610093DA8E /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D0BFA1F8D3A610093DA8E /* FirstScreenView.swift */; };
+		B94D0BFD1F8D411D0093DA8E /* EmployerLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D0BFC1F8D411D0093DA8E /* EmployerLoginView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B94294FE1F8D1D7200F72AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B94294E11F8D1D7200F72AD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B94294E81F8D1D7200F72AD4;
+			remoteInfo = AllTheWage;
+		};
+		B94295091F8D1D7200F72AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B94294E11F8D1D7200F72AD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B94294E81F8D1D7200F72AD4;
+			remoteInfo = AllTheWage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B94294E91F8D1D7200F72AD4 /* AllTheWage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTheWage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B94294EC1F8D1D7200F72AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B94294EE1F8D1D7200F72AD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B94294F11F8D1D7200F72AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B94294F31F8D1D7200F72AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B94294F61F8D1D7200F72AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B94294F81F8D1D7200F72AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B94294FD1F8D1D7200F72AD4 /* AllTheWageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllTheWageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B94295011F8D1D7200F72AD4 /* AllTheWageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTheWageTests.swift; sourceTree = "<group>"; };
+		B94295031F8D1D7200F72AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B94295081F8D1D7200F72AD4 /* AllTheWageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllTheWageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B942950C1F8D1D7200F72AD4 /* AllTheWageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTheWageUITests.swift; sourceTree = "<group>"; };
+		B942950E1F8D1D7200F72AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B942951A1F8D1EEE00F72AD4 /* AllTheWage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AllTheWage-Bridging-Header.h"; sourceTree = "<group>"; };
+		B942951B1F8D1EEE00F72AD4 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		B942951C1F8D1EEE00F72AD4 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		B942951E1F8D28E500F72AD4 /* EmployeeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTabView.swift; sourceTree = "<group>"; };
+		B94295201F8D292C00F72AD4 /* PaycheckTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaycheckTabView.swift; sourceTree = "<group>"; };
+		B94295221F8D293E00F72AD4 /* HelpTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTabView.swift; sourceTree = "<group>"; };
+		B94295241F8D296F00F72AD4 /* ForumTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumTabView.swift; sourceTree = "<group>"; };
+		B94295261F8D299D00F72AD4 /* PayRateTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayRateTabView.swift; sourceTree = "<group>"; };
+		B94295281F8D29CA00F72AD4 /* HoursTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTabView.swift; sourceTree = "<group>"; };
+		B94D0BFA1F8D3A610093DA8E /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
+		B94D0BFC1F8D411D0093DA8E /* EmployerLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerLoginView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B94294E61F8D1D7200F72AD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94294FA1F8D1D7200F72AD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94295051F8D1D7200F72AD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B94294E01F8D1D7200F72AD4 = {
+			isa = PBXGroup;
+			children = (
+				B94294EB1F8D1D7200F72AD4 /* AllTheWage */,
+				B94295001F8D1D7200F72AD4 /* AllTheWageTests */,
+				B942950B1F8D1D7200F72AD4 /* AllTheWageUITests */,
+				B94294EA1F8D1D7200F72AD4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B94294EA1F8D1D7200F72AD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B94294E91F8D1D7200F72AD4 /* AllTheWage.app */,
+				B94294FD1F8D1D7200F72AD4 /* AllTheWageTests.xctest */,
+				B94295081F8D1D7200F72AD4 /* AllTheWageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B94294EB1F8D1D7200F72AD4 /* AllTheWage */ = {
+			isa = PBXGroup;
+			children = (
+				B94D0BF91F8D39260093DA8E /* Login Screens */,
+				B94D0BF81F8D39140093DA8E /* Employee Side */,
+				B94294EC1F8D1D7200F72AD4 /* AppDelegate.swift */,
+				B94D0BF61F8D38BC0093DA8E /* Employer Side */,
+				B94294F01F8D1D7200F72AD4 /* Main.storyboard */,
+				B94294F31F8D1D7200F72AD4 /* Assets.xcassets */,
+				B94294F51F8D1D7200F72AD4 /* LaunchScreen.storyboard */,
+				B94294F81F8D1D7200F72AD4 /* Info.plist */,
+				B942951B1F8D1EEE00F72AD4 /* SWRevealViewController.h */,
+				B942951C1F8D1EEE00F72AD4 /* SWRevealViewController.m */,
+				B942951A1F8D1EEE00F72AD4 /* AllTheWage-Bridging-Header.h */,
+			);
+			path = AllTheWage;
+			sourceTree = "<group>";
+		};
+		B94295001F8D1D7200F72AD4 /* AllTheWageTests */ = {
+			isa = PBXGroup;
+			children = (
+				B94295011F8D1D7200F72AD4 /* AllTheWageTests.swift */,
+				B94295031F8D1D7200F72AD4 /* Info.plist */,
+			);
+			path = AllTheWageTests;
+			sourceTree = "<group>";
+		};
+		B942950B1F8D1D7200F72AD4 /* AllTheWageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B942950C1F8D1D7200F72AD4 /* AllTheWageUITests.swift */,
+				B942950E1F8D1D7200F72AD4 /* Info.plist */,
+			);
+			path = AllTheWageUITests;
+			sourceTree = "<group>";
+		};
+		B94D0BF61F8D38BC0093DA8E /* Employer Side */ = {
+			isa = PBXGroup;
+			children = (
+				B94294EE1F8D1D7200F72AD4 /* ViewController.swift */,
+				B94295201F8D292C00F72AD4 /* PaycheckTabView.swift */,
+				B94295221F8D293E00F72AD4 /* HelpTabView.swift */,
+				B942951E1F8D28E500F72AD4 /* EmployeeTabView.swift */,
+				B94295261F8D299D00F72AD4 /* PayRateTabView.swift */,
+				B94295241F8D296F00F72AD4 /* ForumTabView.swift */,
+				B94295281F8D29CA00F72AD4 /* HoursTabView.swift */,
+			);
+			path = "Employer Side";
+			sourceTree = "<group>";
+		};
+		B94D0BF81F8D39140093DA8E /* Employee Side */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Employee Side";
+			sourceTree = "<group>";
+		};
+		B94D0BF91F8D39260093DA8E /* Login Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B94D0BFA1F8D3A610093DA8E /* FirstScreenView.swift */,
+				B94D0BFC1F8D411D0093DA8E /* EmployerLoginView.swift */,
+			);
+			path = "Login Screens";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B94294E81F8D1D7200F72AD4 /* AllTheWage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B94295111F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWage" */;
+			buildPhases = (
+				B94294E51F8D1D7200F72AD4 /* Sources */,
+				B94294E61F8D1D7200F72AD4 /* Frameworks */,
+				B94294E71F8D1D7200F72AD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AllTheWage;
+			productName = AllTheWage;
+			productReference = B94294E91F8D1D7200F72AD4 /* AllTheWage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B94294FC1F8D1D7200F72AD4 /* AllTheWageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B94295141F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWageTests" */;
+			buildPhases = (
+				B94294F91F8D1D7200F72AD4 /* Sources */,
+				B94294FA1F8D1D7200F72AD4 /* Frameworks */,
+				B94294FB1F8D1D7200F72AD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B94294FF1F8D1D7200F72AD4 /* PBXTargetDependency */,
+			);
+			name = AllTheWageTests;
+			productName = AllTheWageTests;
+			productReference = B94294FD1F8D1D7200F72AD4 /* AllTheWageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B94295071F8D1D7200F72AD4 /* AllTheWageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B94295171F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWageUITests" */;
+			buildPhases = (
+				B94295041F8D1D7200F72AD4 /* Sources */,
+				B94295051F8D1D7200F72AD4 /* Frameworks */,
+				B94295061F8D1D7200F72AD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B942950A1F8D1D7200F72AD4 /* PBXTargetDependency */,
+			);
+			name = AllTheWageUITests;
+			productName = AllTheWageUITests;
+			productReference = B94295081F8D1D7200F72AD4 /* AllTheWageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B94294E11F8D1D7200F72AD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Andres Ibarra";
+				TargetAttributes = {
+					B94294E81F8D1D7200F72AD4 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					B94294FC1F8D1D7200F72AD4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B94294E81F8D1D7200F72AD4;
+					};
+					B94295071F8D1D7200F72AD4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B94294E81F8D1D7200F72AD4;
+					};
+				};
+			};
+			buildConfigurationList = B94294E41F8D1D7200F72AD4 /* Build configuration list for PBXProject "AllTheWage" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B94294E01F8D1D7200F72AD4;
+			productRefGroup = B94294EA1F8D1D7200F72AD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B94294E81F8D1D7200F72AD4 /* AllTheWage */,
+				B94294FC1F8D1D7200F72AD4 /* AllTheWageTests */,
+				B94295071F8D1D7200F72AD4 /* AllTheWageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B94294E71F8D1D7200F72AD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94294F71F8D1D7200F72AD4 /* LaunchScreen.storyboard in Resources */,
+				B94294F41F8D1D7200F72AD4 /* Assets.xcassets in Resources */,
+				B94294F21F8D1D7200F72AD4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94294FB1F8D1D7200F72AD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94295061F8D1D7200F72AD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B94294E51F8D1D7200F72AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94294EF1F8D1D7200F72AD4 /* ViewController.swift in Sources */,
+				B94295291F8D29CA00F72AD4 /* HoursTabView.swift in Sources */,
+				B94294ED1F8D1D7200F72AD4 /* AppDelegate.swift in Sources */,
+				B94D0BFD1F8D411D0093DA8E /* EmployerLoginView.swift in Sources */,
+				B94D0BFB1F8D3A610093DA8E /* FirstScreenView.swift in Sources */,
+				B94295211F8D292C00F72AD4 /* PaycheckTabView.swift in Sources */,
+				B942951F1F8D28E500F72AD4 /* EmployeeTabView.swift in Sources */,
+				B94295251F8D296F00F72AD4 /* ForumTabView.swift in Sources */,
+				B942951D1F8D1EEE00F72AD4 /* SWRevealViewController.m in Sources */,
+				B94295231F8D293E00F72AD4 /* HelpTabView.swift in Sources */,
+				B94295271F8D299D00F72AD4 /* PayRateTabView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94294F91F8D1D7200F72AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94295021F8D1D7200F72AD4 /* AllTheWageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B94295041F8D1D7200F72AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B942950D1F8D1D7200F72AD4 /* AllTheWageUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B94294FF1F8D1D7200F72AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B94294E81F8D1D7200F72AD4 /* AllTheWage */;
+			targetProxy = B94294FE1F8D1D7200F72AD4 /* PBXContainerItemProxy */;
+		};
+		B942950A1F8D1D7200F72AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B94294E81F8D1D7200F72AD4 /* AllTheWage */;
+			targetProxy = B94295091F8D1D7200F72AD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B94294F01F8D1D7200F72AD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B94294F11F8D1D7200F72AD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B94294F51F8D1D7200F72AD4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B94294F61F8D1D7200F72AD4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B942950F1F8D1D7200F72AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B94295101F8D1D7200F72AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B94295121F8D1D7200F72AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QS56B24SK6;
+				INFOPLIST_FILE = AllTheWage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibarraandiba.AllTheWage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AllTheWage/AllTheWage-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B94295131F8D1D7200F72AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QS56B24SK6;
+				INFOPLIST_FILE = AllTheWage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibarraandiba.AllTheWage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AllTheWage/AllTheWage-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B94295151F8D1D7200F72AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QS56B24SK6;
+				INFOPLIST_FILE = AllTheWageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibarraandiba.AllTheWageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllTheWage.app/AllTheWage";
+			};
+			name = Debug;
+		};
+		B94295161F8D1D7200F72AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QS56B24SK6;
+				INFOPLIST_FILE = AllTheWageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibarraandiba.AllTheWageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllTheWage.app/AllTheWage";
+			};
+			name = Release;
+		};
+		B94295181F8D1D7200F72AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QS56B24SK6;
+				INFOPLIST_FILE = AllTheWageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibarraandiba.AllTheWageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AllTheWage;
+			};
+			name = Debug;
+		};
+		B94295191F8D1D7200F72AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QS56B24SK6;
+				INFOPLIST_FILE = AllTheWageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibarraandiba.AllTheWageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AllTheWage;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B94294E41F8D1D7200F72AD4 /* Build configuration list for PBXProject "AllTheWage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B942950F1F8D1D7200F72AD4 /* Debug */,
+				B94295101F8D1D7200F72AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B94295111F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B94295121F8D1D7200F72AD4 /* Debug */,
+				B94295131F8D1D7200F72AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B94295141F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B94295151F8D1D7200F72AD4 /* Debug */,
+				B94295161F8D1D7200F72AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B94295171F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B94295181F8D1D7200F72AD4 /* Debug */,
+				B94295191F8D1D7200F72AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B94294E11F8D1D7200F72AD4 /* Project object */;
+}
