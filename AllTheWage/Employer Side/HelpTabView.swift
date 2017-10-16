@@ -10,7 +10,9 @@ import UIKit
 
 class HelpTabView: UIViewController {
 
+   
     @IBOutlet var HelpTabOpenButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         HelpTabOpenButton.target = self.revealViewController()

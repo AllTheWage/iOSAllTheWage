@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var RequestsTableView: UITableView!
-    
+    @IBOutlet var EmployerNameTextField: UILabel!
     
     @IBOutlet var Open: UIBarButtonItem!
     
+    @IBOutlet var RequestsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         
         //adding rounded corners to the table view that handles all the requests in the main page
-        RequestsTableView.layer.cornerRadius = 10
+        RequestsTableView.layer.cornerRadius = 15
         RequestsTableView.layer.masksToBounds = true
         
     }

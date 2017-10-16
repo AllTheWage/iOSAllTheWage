@@ -9,8 +9,6 @@
 import UIKit
 
 
-
-
 class EmployerLoginView: UIViewController, UITextFieldDelegate  {
     
     let alert = UIAlertController(title: "Error", message: "Could Not login, Email or Password could not be found", preferredStyle: UIAlertControllerStyle.alert)
@@ -18,8 +16,8 @@ class EmployerLoginView: UIViewController, UITextFieldDelegate  {
     var loginIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     @IBOutlet var EmailTextFieldInformation: UITextField!
     @IBOutlet var PasswordTextFieldInformation: UITextField!
-    var sampleEmail = "andibarram@gmail.com"
-    var samplePassword = "andres1996"
+    var sampleEmail = "test"
+    var samplePassword = "test"
     var emailchecker: String!
     var passchecker: String!
     

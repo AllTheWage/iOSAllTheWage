@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F310448BFD3A4DE920CD028 /* Pods_AllTheWageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558158DA4B9A1BFF3CBF7A14 /* Pods_AllTheWageTests.framework */; };
+		B215C836AC61C2CC089F465D /* Pods_AllTheWageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB99E8E2315DF3496E906C9 /* Pods_AllTheWageUITests.framework */; };
+		B903D47C1F95066A00AFF78F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B903D47B1F95040D00AFF78F /* GoogleService-Info.plist */; };
 		B94294ED1F8D1D7200F72AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94294EC1F8D1D7200F72AD4 /* AppDelegate.swift */; };
 		B94294EF1F8D1D7200F72AD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94294EE1F8D1D7200F72AD4 /* ViewController.swift */; };
 		B94294F21F8D1D7200F72AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94294F01F8D1D7200F72AD4 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 		B94295291F8D29CA00F72AD4 /* HoursTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94295281F8D29CA00F72AD4 /* HoursTabView.swift */; };
 		B94D0BFB1F8D3A610093DA8E /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D0BFA1F8D3A610093DA8E /* FirstScreenView.swift */; };
 		B94D0BFD1F8D411D0093DA8E /* EmployerLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D0BFC1F8D411D0093DA8E /* EmployerLoginView.swift */; };
+		B98377311F8F187A0044B844 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98377301F8F187A0044B844 /* MapKit.framework */; };
+		B9ACAEE01F950C7C0093E7B7 /* SignUpEmployerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACAEDF1F950C7C0093E7B7 /* SignUpEmployerView.swift */; };
+		CF57018E1D7B07F321139D5B /* Pods_AllTheWage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA32937F221D21D8EC9F96 /* Pods_AllTheWage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24CA32937F221D21D8EC9F96 /* Pods_AllTheWage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB99E8E2315DF3496E906C9 /* Pods_AllTheWageUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWageUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		558158DA4B9A1BFF3CBF7A14 /* Pods_AllTheWageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DD24C9B4C3D61B48368507D /* Pods-AllTheWage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWage.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage.release.xcconfig"; sourceTree = "<group>"; };
+		A5A0D6890F3A012D1FC2AE19 /* Pods-AllTheWageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWageTests/Pods-AllTheWageTests.release.xcconfig"; sourceTree = "<group>"; };
+		B903D47B1F95040D00AFF78F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B94294E91F8D1D7200F72AD4 /* AllTheWage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTheWage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94294EC1F8D1D7200F72AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94294EE1F8D1D7200F72AD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +79,12 @@
 		B94295281F8D29CA00F72AD4 /* HoursTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTabView.swift; sourceTree = "<group>"; };
 		B94D0BFA1F8D3A610093DA8E /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
 		B94D0BFC1F8D411D0093DA8E /* EmployerLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerLoginView.swift; sourceTree = "<group>"; };
+		B98377301F8F187A0044B844 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B9ACAEDF1F950C7C0093E7B7 /* SignUpEmployerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmployerView.swift; sourceTree = "<group>"; };
+		BC2116985774D72C44AA6A58 /* Pods-AllTheWage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage.debug.xcconfig"; sourceTree = "<group>"; };
+		C09993EC89285E33DD2447E1 /* Pods-AllTheWageUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWageUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWageUITests/Pods-AllTheWageUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3BC98BA5BD2F2821707C499 /* Pods-AllTheWageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWageTests/Pods-AllTheWageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0B7D4359D593C6FB00204E /* Pods-AllTheWageUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWageUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWageUITests/Pods-AllTheWageUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B98377311F8F187A0044B844 /* MapKit.framework in Frameworks */,
+				CF57018E1D7B07F321139D5B /* Pods_AllTheWage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F310448BFD3A4DE920CD028 /* Pods_AllTheWageTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +109,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B215C836AC61C2CC089F465D /* Pods_AllTheWageUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F6161887A1C3864B2E46D6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC2116985774D72C44AA6A58 /* Pods-AllTheWage.debug.xcconfig */,
+				6DD24C9B4C3D61B48368507D /* Pods-AllTheWage.release.xcconfig */,
+				D3BC98BA5BD2F2821707C499 /* Pods-AllTheWageTests.debug.xcconfig */,
+				A5A0D6890F3A012D1FC2AE19 /* Pods-AllTheWageTests.release.xcconfig */,
+				C09993EC89285E33DD2447E1 /* Pods-AllTheWageUITests.debug.xcconfig */,
+				DB0B7D4359D593C6FB00204E /* Pods-AllTheWageUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B94294E01F8D1D7200F72AD4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +136,8 @@
 				B94295001F8D1D7200F72AD4 /* AllTheWageTests */,
 				B942950B1F8D1D7200F72AD4 /* AllTheWageUITests */,
 				B94294EA1F8D1D7200F72AD4 /* Products */,
+				B983772F1F8F187A0044B844 /* Frameworks */,
+				1F6161887A1C3864B2E46D6D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +154,7 @@
 		B94294EB1F8D1D7200F72AD4 /* AllTheWage */ = {
 			isa = PBXGroup;
 			children = (
+				B903D47B1F95040D00AFF78F /* GoogleService-Info.plist */,
 				B94D0BF91F8D39260093DA8E /* Login Screens */,
 				B94D0BF81F8D39140093DA8E /* Employee Side */,
 				B94294EC1F8D1D7200F72AD4 /* AppDelegate.swift */,
@@ -176,8 +214,20 @@
 			children = (
 				B94D0BFA1F8D3A610093DA8E /* FirstScreenView.swift */,
 				B94D0BFC1F8D411D0093DA8E /* EmployerLoginView.swift */,
+				B9ACAEDF1F950C7C0093E7B7 /* SignUpEmployerView.swift */,
 			);
 			path = "Login Screens";
+			sourceTree = "<group>";
+		};
+		B983772F1F8F187A0044B844 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B98377301F8F187A0044B844 /* MapKit.framework */,
+				24CA32937F221D21D8EC9F96 /* Pods_AllTheWage.framework */,
+				558158DA4B9A1BFF3CBF7A14 /* Pods_AllTheWageTests.framework */,
+				4CB99E8E2315DF3496E906C9 /* Pods_AllTheWageUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B94295111F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWage" */;
 			buildPhases = (
+				9190C1F0EFFDF812BC605AE1 /* [CP] Check Pods Manifest.lock */,
 				B94294E51F8D1D7200F72AD4 /* Sources */,
 				B94294E61F8D1D7200F72AD4 /* Frameworks */,
 				B94294E71F8D1D7200F72AD4 /* Resources */,
+				1385D541CF439101A1772BB4 /* [CP] Embed Pods Frameworks */,
+				322DE771B72CE1DC83293BC8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B94295141F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWageTests" */;
 			buildPhases = (
+				FBFD668E632F0F9538CF729E /* [CP] Check Pods Manifest.lock */,
 				B94294F91F8D1D7200F72AD4 /* Sources */,
 				B94294FA1F8D1D7200F72AD4 /* Frameworks */,
 				B94294FB1F8D1D7200F72AD4 /* Resources */,
+				F2C0316A29077F023FBFFAA0 /* [CP] Embed Pods Frameworks */,
+				FC7F1EB394AA392C9B9D9103 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,9 +278,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B94295171F8D1D7200F72AD4 /* Build configuration list for PBXNativeTarget "AllTheWageUITests" */;
 			buildPhases = (
+				D5FF87F7EBB44CACDF6FA09B /* [CP] Check Pods Manifest.lock */,
 				B94295041F8D1D7200F72AD4 /* Sources */,
 				B94295051F8D1D7200F72AD4 /* Frameworks */,
 				B94295061F8D1D7200F72AD4 /* Resources */,
+				89ADEFCC7A0772994B9B1C2C /* [CP] Embed Pods Frameworks */,
+				50CA182C43B8FAACE16EB2D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +309,11 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B94294FC1F8D1D7200F72AD4 = {
 						CreatedOnToolsVersion = 9.0;
@@ -289,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94294F71F8D1D7200F72AD4 /* LaunchScreen.storyboard in Resources */,
+				B903D47C1F95066A00AFF78F /* GoogleService-Info.plist in Resources */,
 				B94294F41F8D1D7200F72AD4 /* Assets.xcassets in Resources */,
 				B94294F21F8D1D7200F72AD4 /* Main.storyboard in Resources */,
 			);
@@ -310,12 +375,167 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1385D541CF439101A1772BB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		322DE771B72CE1DC83293BC8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50CA182C43B8FAACE16EB2D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWageUITests/Pods-AllTheWageUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89ADEFCC7A0772994B9B1C2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWageUITests/Pods-AllTheWageUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9190C1F0EFFDF812BC605AE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllTheWage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5FF87F7EBB44CACDF6FA09B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllTheWageUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2C0316A29077F023FBFFAA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWageTests/Pods-AllTheWageTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBFD668E632F0F9538CF729E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllTheWageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC7F1EB394AA392C9B9D9103 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWageTests/Pods-AllTheWageTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B94294E51F8D1D7200F72AD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B94294EF1F8D1D7200F72AD4 /* ViewController.swift in Sources */,
+				B9ACAEE01F950C7C0093E7B7 /* SignUpEmployerView.swift in Sources */,
 				B94295291F8D29CA00F72AD4 /* HoursTabView.swift in Sources */,
 				B94294ED1F8D1D7200F72AD4 /* AppDelegate.swift in Sources */,
 				B94D0BFD1F8D411D0093DA8E /* EmployerLoginView.swift in Sources */,
@@ -489,6 +709,7 @@
 		};
 		B94295121F8D1D7200F72AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2116985774D72C44AA6A58 /* Pods-AllTheWage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -496,7 +717,7 @@
 				DEVELOPMENT_TEAM = QS56B24SK6;
 				INFOPLIST_FILE = AllTheWage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ibarraandiba.AllTheWage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibarraandiba.AllTheWage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AllTheWage/AllTheWage-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -507,6 +728,7 @@
 		};
 		B94295131F8D1D7200F72AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DD24C9B4C3D61B48368507D /* Pods-AllTheWage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -514,7 +736,7 @@
 				DEVELOPMENT_TEAM = QS56B24SK6;
 				INFOPLIST_FILE = AllTheWage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ibarraandiba.AllTheWage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibarraandiba.AllTheWage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AllTheWage/AllTheWage-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -524,6 +746,7 @@
 		};
 		B94295151F8D1D7200F72AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3BC98BA5BD2F2821707C499 /* Pods-AllTheWageTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +764,7 @@
 		};
 		B94295161F8D1D7200F72AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5A0D6890F3A012D1FC2AE19 /* Pods-AllTheWageTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -558,6 +782,7 @@
 		};
 		B94295181F8D1D7200F72AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C09993EC89285E33DD2447E1 /* Pods-AllTheWageUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -574,6 +799,7 @@
 		};
 		B94295191F8D1D7200F72AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB0B7D4359D593C6FB00204E /* Pods-AllTheWageUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

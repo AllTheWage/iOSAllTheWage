@@ -10,7 +10,9 @@ import UIKit
 
 class ForumTabView: UIViewController {
 
+    
     @IBOutlet var ForumTabOpenButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
