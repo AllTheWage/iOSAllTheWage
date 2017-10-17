@@ -7,22 +7,20 @@
 //
 
 import UIKit
-
+import Firebase
 
 class EmployerLoginView: UIViewController, UITextFieldDelegate  {
     
     let alert = UIAlertController(title: "Error", message: "Could Not login, Email or Password could not be found", preferredStyle: UIAlertControllerStyle.alert)
     var clickedAlertMessege = false
     var loginIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     @IBOutlet var EmailTextFieldInformation: UITextField!
     @IBOutlet var PasswordTextFieldInformation: UITextField!
-    var sampleEmail = "test"
-    var samplePassword = "test"
+    
+    
     var emailchecker: String!
     var passchecker: String!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,38 +45,31 @@ class EmployerLoginView: UIViewController, UITextFieldDelegate  {
         loginIndicator.hidesWhenStopped = true
         loginIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(loginIndicator)
+        
         loginIndicator.startAnimating()
         
         //Getting the information from the textfields that the user inputted
         emailchecker = EmailTextFieldInformation.text
         passchecker = PasswordTextFieldInformation.text
-        
-        if sampleEmail == emailchecker {
-            if samplePassword == passchecker{
-                 loginIndicator.stopAnimating() //stopping it to move into the next view
-                performSegue(withIdentifier: "logedIn", sender: UIButton())
-                
-                
-            }
-            else{
-                loginIndicator.stopAnimating()
-                if !clickedAlertMessege{
-                    alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default))
+    
+        Auth.auth().signIn(withEmail: emailchecker, password: passchecker){ (user, error) in
+            if error == nil {
+                    //preform segue
+                 self.loginIndicator.stopAnimating() //stopping it to move into the next view
+               
+                self.performSegue(withIdentifier: "logedIn", sender: nil)
+                } else{
+                print("cannot sign in user")
+                if !self.clickedAlertMessege {
+                    self.alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default))
                 }
+                self.present(self.alert, animated: true, completion: nil)
+                self.clickedAlertMessege = true
                 
-                self.present(alert, animated: true, completion: nil)
-                clickedAlertMessege = true
+                self.loginIndicator.stopAnimating() //stopping it to move into the next view
             }
-        } else{
-            loginIndicator.stopAnimating()
-            
-            if !clickedAlertMessege {
-                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default))
-            }
-            self.present(alert, animated: true, completion: nil)
-             clickedAlertMessege = true
+
         }
-        
         
     }
   

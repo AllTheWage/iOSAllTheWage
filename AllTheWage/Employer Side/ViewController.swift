@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        navigationItem.hidesBackButton = true
         Open.target = self.revealViewController()
         Open.action = #selector(SWRevealViewController.revealToggle(_:))
         
