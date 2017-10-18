@@ -183,7 +183,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Gt2-2n-dZt" kind="show" id="pMS-15-dHe"/>
+                                            <segue destination="Gt2-2n-dZt" kind="presentation" identifier="signedOut" id="o8r-t5-rDb"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -842,6 +842,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="companyNameToBePassed:" destination="jaP-1s-Sir" eventType="editingDidEnd" id="org-4V-Ju6"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJE-80-vDY">
                                 <rect key="frame" x="40" y="343" width="295" height="30"/>
@@ -1012,9 +1015,11 @@
                         <outlet property="ConfirmPasswordTextField" destination="cEs-sq-7Lp" id="Lw0-mM-KfB"/>
                         <outlet property="SignUpEmailTextField" destination="XJE-80-vDY" id="kze-SE-JLO"/>
                         <outlet property="SignUpPasswordTextField" destination="zlY-qh-I4O" id="hid-2Y-ELk"/>
+                        <segue destination="4jU-qG-SpM" kind="show" identifier="signedUP" id="dno-4i-BFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16p-Wp-Prv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jaP-1s-Sir" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2604" y="-481.0344827586207"/>
         </scene>
@@ -1185,6 +1190,7 @@
                         <outlet property="EmployerNameTextField" destination="hxp-Lh-UWk" id="TGe-K9-VgC"/>
                         <outlet property="Open" destination="KBv-4K-rtl" id="Yto-lb-cXv"/>
                         <outlet property="RequestsTableView" destination="d07-LS-epR" id="oMk-Vp-ud8"/>
+                        <outlet property="WelcomeMessege" destination="hxp-Lh-UWk" id="UfV-xc-9Ia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lqr-iQ-Fh3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1329,8 +1335,8 @@
         <image name="sidebarIcon" width="35" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Juc-Lb-rFg"/>
-        <segue reference="VTE-k9-qUN"/>
-        <segue reference="GqL-VC-6Ch"/>
+        <segue reference="Vsa-ao-gmp"/>
+        <segue reference="Kbe-zA-7vD"/>
+        <segue reference="o8r-t5-rDb"/>
     </inferredMetricsTieBreakers>
 </document>

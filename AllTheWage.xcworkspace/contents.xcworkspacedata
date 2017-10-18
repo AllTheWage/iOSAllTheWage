@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/andiba/Desktop/Programming/Swift/AllTheWage/AllTheWage/Login Screens/SideMenuController.swift">
+   </FileRef>
+   <FileRef
       location = "group:AllTheWage.xcodeproj">
    </FileRef>
    <FileRef

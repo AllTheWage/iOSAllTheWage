@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import Firebase
+
 
 class FirstScreenView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        do{
+            try Auth.auth().signOut()
+        }
+        catch let error as NSError {
+            print("COULD NOT SIGN OUT")
+            print(error.localizedDescription)
+        }
 
         // Do any additional setup after loading the view.
     }

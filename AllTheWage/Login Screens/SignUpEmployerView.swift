@@ -11,9 +11,25 @@ import Firebase
 
 class SignUpEmployerView: UIViewController, UITextFieldDelegate {
     
+    //DATABASE
+    var ref = Database.database().reference()
+    
+    //ALERT VARIABLE FOR WHEN LOGIN IS SUCCESSFUL
+    let loginSuccessful = UIAlertController(title: "Signed Up", message: "Sign Up Successful, Now Login with Your New Account!", preferredStyle: UIAlertControllerStyle.alert)
+    var sucessfulLoginbool = false
+    
+    //ALERT VARIABLE FOR WHEN SIGNUP WAS NOT POSSIBLE
+    let couldNotSignUp = UIAlertController(title: "Error", message: "Could Not Signup, Make sure password is at least 6 characters and Email is Valid!", preferredStyle: UIAlertControllerStyle.alert)
+    var clickedCouldNotSignUpAlert = false
+    
+    
     //ALERT VARIABLE FOR WHEN LOGIN IS NOT VALID
     let passwordsDontMatch = UIAlertController(title: "Error", message: "Could Not Signup, Passwords Must match", preferredStyle: UIAlertControllerStyle.alert)
     var clickedAlertMessege = false
+    var ableToLoginAfterSignup = false
+    
+    
+    
     
     //VARIABLES FOR WHEN GRABBING USER DATA
     var signupemail: String!
@@ -28,10 +44,14 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
     @IBOutlet var ConfirmPasswordTextField: UITextField!
     
     
+    func getCompanyName() -> String{
+        return companyname;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //allowing so we can hide keyboard after we finish filling in the last field
-         self.ConfirmPasswordTextField.delegate = self
+        self.ConfirmPasswordTextField.delegate = self
         self.SignUpPasswordTextField.delegate = self
         self.SignUpEmailTextField.delegate = self
         self.CompanyName.delegate = self
@@ -57,9 +77,47 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
             //still need to check in case account is already made
             
             //creating a new user
-            Auth.auth().createUser(withEmail: signupemail, password: signuppassword, completion: nil)
+            Auth.auth().createUser(withEmail: signupemail, password: signuppassword){(user, error) in
+                if error == nil{
+                    //SignUp Sucessful
+                    if !self.sucessfulLoginbool {
+                        self.loginSuccessful.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default))
+                    }
+                    self.present(self.loginSuccessful, animated: true, completion: nil)
+                    self.sucessfulLoginbool = true
+                    
+                    //SIGNING IN USER AND ADDING COMPANY NAME TO DATABASE
+                    Auth.auth().signIn(withEmail: self.signupemail, password: self.signuppassword, completion: { (user, error) in
+                        if error == nil {
+                            //sucess
+
+                            self.ref.child("EMPLOYERS").child("Company Name").child(user!.uid).setValue(self.companyname)
+                            self.ableToLoginAfterSignup = true
+                        }
+                        else{
+                            print("could not sign in user")
+                        }
+                    })
+                   
+
+                }else{
+                    //show alert because passwords don't match
+                    if !self.clickedCouldNotSignUpAlert {
+                        self.couldNotSignUp.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default))
+                    }
+                    self.present(self.couldNotSignUp, animated: true, completion: nil)
+                    self.clickedCouldNotSignUpAlert = true
+                    return
+                }
+                if self.ableToLoginAfterSignup{
+                    self.performSegue(withIdentifier: "signedUP", sender: Any?.self)
+                }
+            }
+           
+            
+            
         } else{
-            //show alert
+            //show alert because passwords don't match
             if !clickedAlertMessege {
                 passwordsDontMatch.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default))
             }
@@ -67,14 +125,7 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
             clickedAlertMessege = true
 
         }
-
     }
-
-
-
-
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
