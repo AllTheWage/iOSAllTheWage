@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+var GlobalCompanyName = " "
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -50,6 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         catch let error as NSError {
                 print(error.localizedDescription)
         }
+        
+        
+        
         
     }
 

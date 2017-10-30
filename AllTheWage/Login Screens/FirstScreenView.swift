@@ -21,7 +21,8 @@ class FirstScreenView: UIViewController {
             print("COULD NOT SIGN OUT")
             print(error.localizedDescription)
         }
-
+        employeeNames.removeAll(keepingCapacity: true)
+        
         // Do any additional setup after loading the view.
     }
 

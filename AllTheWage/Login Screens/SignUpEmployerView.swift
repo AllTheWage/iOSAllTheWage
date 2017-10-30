@@ -44,9 +44,7 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
     @IBOutlet var ConfirmPasswordTextField: UITextField!
     
     
-    func getCompanyName() -> String{
-        return companyname;
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,9 +87,15 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
                     //SIGNING IN USER AND ADDING COMPANY NAME TO DATABASE
                     Auth.auth().signIn(withEmail: self.signupemail, password: self.signuppassword, completion: { (user, error) in
                         if error == nil {
-                            //sucess
-
-                            self.ref.child("EMPLOYERS").child("Company Name").child(user!.uid).setValue(self.companyname)
+                            //success
+                            //setting all the needed fields for the application to start up correctly after a sign up
+                            self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Name").setValue("")
+                            self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Email").setValue("")
+                            self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Phone Number").setValue("")
+                            self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Age").setValue(0)
+                            self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Social Security").setValue("")
+                            
+                            
                             self.ableToLoginAfterSignup = true
                         }
                         else{
@@ -113,8 +117,6 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
                     self.performSegue(withIdentifier: "signedUP", sender: Any?.self)
                 }
             }
-           
-            
             
         } else{
             //show alert because passwords don't match
