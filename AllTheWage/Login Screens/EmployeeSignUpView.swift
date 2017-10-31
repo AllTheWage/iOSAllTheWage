@@ -126,7 +126,7 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
                                  self.ref.child("EMPLOYERS").child("Companies").child(self.employerID).child(self.employerName).child(user!.uid).child("Name").setValue(self.name)
                                  
                                  //AGE
-                                 self.ref.child("EMPLOYERS").child("Companies").child(self.employerID).child(self.employerName).child(user!.uid).child("Age").setValue(self.age)
+                                 self.ref.child("EMPLOYERS").child("Companies").child(self.employerID).child(self.employerName).child(user!.uid).child("Age").setValue(Int(self.age))
                                  //EMAIL
                                  self.ref.child("EMPLOYERS").child("Companies").child(self.employerID).child(self.employerName).child(user!.uid).child("Email").setValue(self.Email)
                                  //Phone Number
