@@ -15,6 +15,9 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
     //DATABASE
     var ref = Database.database().reference()
     
+    //login activity view so user doesn't think the program chrashed
+    var loadingIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     //ALERT VARIABLE FOR WHEN LOGIN IS SUCCESSFUL
     let loginSuccessful = UIAlertController(title: "Signed Up", message: "Sign Up Successful, Now Login with Your New Account!", preferredStyle: UIAlertControllerStyle.alert)
     var sucessfulLoginbool = false
@@ -70,6 +73,15 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
 
     
     @IBAction func clickedSignUp(_ sender: Any) {
+        loadingIndicator.center = self.view.center
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(loadingIndicator)
+        
+        loadingIndicator.startAnimating()
+        
+        
+        
         name = NameTextField.text
         age = AgeTextField.text
         phoneNumber = PhoneNumberTextField.text
@@ -85,6 +97,7 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
             Auth.auth().createUser(withEmail: Email, password: password){(user, error) in
                 if error == nil
                 {
+                    self.loadingIndicator.stopAnimating()
                     //making sure we havent already diplayed this message before so that we don't add extra buttons we don't need
                     if !self.sucessfulLoginbool
                     {
@@ -146,6 +159,7 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
                     })//end of sign In Method
                 } //end of if error == nil
                 else{
+                    self.loadingIndicator.stopAnimating()
                     //show alert because something went wrong
                     if !self.clickedCouldNotSignUpAlert {
                         self.couldNotSignUp.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default))
@@ -156,7 +170,7 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
                 }//end of if error != null
             }   //end of signup method
         } else { //show alert because passwords don't match
-  
+            loadingIndicator.stopAnimating()
             if !clickedAlertMessege {
                 passwordsDontMatch.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default))
             }
@@ -165,6 +179,7 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
             
         }
         if ableToLoginAfterSignup{
+            loadingIndicator.stopAnimating()
             performSegue(withIdentifier: "signedUp", sender: nil)
         }
     }

@@ -16,6 +16,8 @@ class EmployeeTabView: UIViewController, UITableViewDelegate, UITableViewDataSou
   
     var clickedToClose = false
     var ref = Database.database().reference()
+    //login activity view so user doesn't think the program chrashed
+    var loadingIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBOutlet var employeeInformationTextView: UITextView!
     
@@ -31,6 +33,12 @@ class EmployeeTabView: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet var EmployeesTabOpenButton: UIBarButtonItem!
     
     override func viewDidLoad() {
+        loadingIndicator.center = self.view.center
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(loadingIndicator)
+        
+        loadingIndicator.startAnimating()
         importedNames = false
         super.viewDidLoad()
         
@@ -62,6 +70,10 @@ class EmployeeTabView: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         EmployeesTabOpenButton.target = self.revealViewController()
         EmployeesTabOpenButton.action = #selector(SWRevealViewController.revealToggle(_:))
+        
+        //stoping the loginIndicator
+        loadingIndicator.stopAnimating()
+        
     }
     
 

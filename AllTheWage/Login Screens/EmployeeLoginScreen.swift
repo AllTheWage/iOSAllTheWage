@@ -54,7 +54,6 @@ class EmployeeLoginScreen: UIViewController, UITextFieldDelegate  {
         
         Auth.auth().signIn(withEmail: emailchecker, password: passchecker){ (user, error) in
             if error == nil {
-                //preform segue
                 self.loginIndicator.stopAnimating() //stopping it to move into the next view
                 self.performSegue(withIdentifier: "logedIn", sender: nil)
             } else{
