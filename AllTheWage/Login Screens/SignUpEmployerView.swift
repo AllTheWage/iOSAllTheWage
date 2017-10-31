@@ -30,7 +30,6 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
     
     
     
-    
     //VARIABLES FOR WHEN GRABBING USER DATA
     var signupemail: String!
     var signuppassword: String!
@@ -72,8 +71,6 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
         passwordconfirm = ConfirmPasswordTextField.text
 
         if signuppassword == passwordconfirm {
-            //still need to check in case account is already made
-            
             //creating a new user
             Auth.auth().createUser(withEmail: signupemail, password: signuppassword){(user, error) in
                 if error == nil{
@@ -104,8 +101,9 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
                     })
                    
 
-                }else{
-                    //show alert because passwords don't match
+                }//end of if error == nil
+                else{
+                    //show alert because something went wrong
                     if !self.clickedCouldNotSignUpAlert {
                         self.couldNotSignUp.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.default))
                     }
@@ -116,9 +114,9 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
                 if self.ableToLoginAfterSignup{
                     self.performSegue(withIdentifier: "signedUP", sender: Any?.self)
                 }
-            }
-            
-        } else{
+            }//end of create user func
+        }//end of if passwords don't match
+        else{
             //show alert because passwords don't match
             if !clickedAlertMessege {
                 passwordsDontMatch.addAction(UIAlertAction(title: "Back", style: UIAlertActionStyle.default))

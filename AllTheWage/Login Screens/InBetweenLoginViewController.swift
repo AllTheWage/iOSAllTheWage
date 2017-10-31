@@ -14,7 +14,7 @@ class InBetweenLoginViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         self.performSegue(withIdentifier: "InBetween", sender: Any?.self)
-        // Do any additional setup after loading the view.
+       
     }
 
     override func didReceiveMemoryWarning() {
