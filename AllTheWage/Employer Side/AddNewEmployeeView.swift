@@ -18,9 +18,13 @@ class AddNewEmployeeView: UIViewController {
     
     @IBAction func ClickedAddEmployee(_ sender: UIButton) {
         //send email to employee to set up email
-        performSegue(withIdentifier: "AddedEmployee", sender: nil)
+       
     }
    
+    @IBAction func clickedCancel(_ sender: Any) {
+        
+       
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     

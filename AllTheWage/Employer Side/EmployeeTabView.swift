@@ -25,9 +25,7 @@ class EmployeeTabView: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     
     @IBAction func AddEmployeeClicked(_ sender: Any) {
-
-        self.performSegue(withIdentifier: "createNewEmployee", sender: nil)
-        
+        performSegue(withIdentifier: "createNewEmployee", sender: nil)
     }
     
     @IBOutlet var EmployeesTabOpenButton: UIBarButtonItem!
@@ -145,5 +143,13 @@ class EmployeeTabView: UIViewController, UITableViewDelegate, UITableViewDataSou
         showEmployeeInformation(name: selectedEmployee, arrayLocation: indexPath.row)
     }
 
+    
+    @IBAction func cancelAddNewEmployee(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
+    
+    
+    
 }
 

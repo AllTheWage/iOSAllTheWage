@@ -72,4 +72,18 @@ class EmployeeLoginScreen: UIViewController, UITextFieldDelegate  {
         
     }
     
+    
+    @IBAction func clickedSignUp(_ sender: Any) {
+        performSegue(withIdentifier: "employeeSignUp", sender: nil)
+        
+    }
+    
+    @IBAction func cancelSignup(unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
+    
+    
+    
+    
 }

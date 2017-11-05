@@ -180,9 +180,15 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
         }
         if ableToLoginAfterSignup{
             loadingIndicator.stopAnimating()
-            performSegue(withIdentifier: "signedUp", sender: nil)
+            
         }
     }
     
 
+    
+    
+    
+    
+    
+    
 }
