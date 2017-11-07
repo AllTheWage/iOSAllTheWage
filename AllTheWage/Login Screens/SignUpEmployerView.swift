@@ -2,6 +2,8 @@
 //  SignUpEmployerView.swift
 //  AllTheWage
 //
+//  Description: Sign Up Screen for Employer
+//
 //  Created by Andres Ibarra on 10/16/17.
 //  Copyright © 2017 Andres Ibarra. All rights reserved.
 //
@@ -11,32 +13,38 @@ import Firebase
 
 class SignUpEmployerView: UIViewController, UITextFieldDelegate {
     
-    //DATABASE
-    var ref = Database.database().reference()
     
-    //ALERT VARIABLE FOR WHEN LOGIN IS SUCCESSFUL
+    var ref = Database.database().reference() // DATABASE REF TO ALLOW US TO ACCESS IT
+    
+    
+    // DESCRIPTION:
+    // ALERT VARIABLE FOR WHEN LOGIN IS SUCCESSFUL
     let loginSuccessful = UIAlertController(title: "Signed Up", message: "Sign Up Successful, Now Login with Your New Account!", preferredStyle: UIAlertControllerStyle.alert)
     var sucessfulLoginbool = false
     
-    //ALERT VARIABLE FOR WHEN SIGNUP WAS NOT POSSIBLE
+    // DESCRIPTION:
+    // ALERT VARIABLE FOR WHEN SIGNUP WAS NOT POSSIBLE
     let couldNotSignUp = UIAlertController(title: "Error", message: "Could Not Signup, Make sure password is at least 6 characters and Email is Valid!", preferredStyle: UIAlertControllerStyle.alert)
     var clickedCouldNotSignUpAlert = false
     
-    
-    //ALERT VARIABLE FOR WHEN LOGIN IS NOT VALID
+    // DESCRIPTION:
+    // ALERT VARIABLE FOR WHEN LOGIN IS NOT VALID
     let passwordsDontMatch = UIAlertController(title: "Error", message: "Could Not Signup, Passwords Must match", preferredStyle: UIAlertControllerStyle.alert)
     var clickedAlertMessege = false
     var ableToLoginAfterSignup = false
     
     
-    
-    //VARIABLES FOR WHEN GRABBING USER DATA
+    // DESCRIPTION:
+    // CHECKER VARIABLES
+    // these are the variables that will contain the read in information from the textfields
     var signupemail: String!
     var signuppassword: String!
     var passwordconfirm: String!
     var companyname: String!
  
-    //CONNECTIONS TO THE UI TO HELP IN GETTING USER DATA
+    // DESCRIPTION:
+    // TEXTFIELDS VARIABLES
+    // these are the textfields that appear and this is where we can grab the information
     @IBOutlet var CompanyName: UITextField!
     @IBOutlet var SignUpEmailTextField: UITextField!
     @IBOutlet var SignUpPasswordTextField: UITextField!
@@ -47,31 +55,41 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //allowing so we can hide keyboard after we finish filling in the last field
+        // DESCRIPTION
+        // delegating the textfields to allow the
+        // implementation of func textFieldShouldReturn()
         self.ConfirmPasswordTextField.delegate = self
         self.SignUpPasswordTextField.delegate = self
         self.SignUpEmailTextField.delegate = self
         self.CompanyName.delegate = self
-        // Do any additional setup after loading the view.
+        
     }
-
+    
+    // DESCRIPTION:
+    // Called when the editing is done on a textfield
+    // and the return button is clicked to remove the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
     
-    //USER SHOULD HAVE ENTERED ALL INFORMATION AND HAS NOW TRIED TO SIGN UP
+    // DESCRIPTION:
+    // User has entered in his/her information and we will now
+    // attempt to sign up user and set up their section in the database
     @IBAction func SignUpButtonPressed(_ sender: Any){
-
-        //assigning each variable with the information passed
+        // DESCRIPTION:
+        // assigning each variable with the information passed
         companyname = CompanyName.text
         signupemail = SignUpEmailTextField.text
         signuppassword = SignUpPasswordTextField.text
         passwordconfirm = ConfirmPasswordTextField.text
 
+        // DESCRIPTION:
+        // MAKING SURE PASSWORDS MATCH
         if signuppassword == passwordconfirm {
-            //creating a new user
+            
+            //Create a new user
             Auth.auth().createUser(withEmail: signupemail, password: signuppassword){(user, error) in
                 if error == nil{
                     //SignUp Sucessful
@@ -79,13 +97,17 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
                         self.loginSuccessful.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default))
                     }
                     self.present(self.loginSuccessful, animated: true, completion: nil)
-                    self.sucessfulLoginbool = true
+                    self.sucessfulLoginbool = true  //we were able to sign up
                     
-                    //SIGNING IN USER AND ADDING COMPANY NAME TO DATABASE
+                    // DESCRIPTION:
+                    // We will now sign in the user after a sucessful set up and
+                    // set up their database section
+                    // SIGNING IN USER AND ADDING INFORMATION TO DATABASE
                     Auth.auth().signIn(withEmail: self.signupemail, password: self.signuppassword, completion: { (user, error) in
                         if error == nil {
-                            //success
-                            //setting all the needed fields for the application to start up correctly after a sign up
+                            // Successful Login
+                            // setting all the needed fields for the application to start up correctly after a sign up
+                            // these values will be modified later on
                             self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Name").setValue("")
                             self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Email").setValue("")
                             self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Phone Number").setValue("")
@@ -98,8 +120,8 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
                         else{
                             print("could not sign in user")
                         }
-                    })
-                   
+                    })//end of login In Method
+                    
 
                 }//end of if error == nil
                 else{
@@ -114,8 +136,9 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
                 if self.ableToLoginAfterSignup{
                     self.performSegue(withIdentifier: "signedUP", sender: Any?.self)
                 }
-            }//end of create user func
-        }//end of if passwords don't match
+            }//END OF create user func
+            
+        }//END OF if passwords don't match
         else{
             //show alert because passwords don't match
             if !clickedAlertMessege {
@@ -124,13 +147,9 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
             self.present(passwordsDontMatch, animated: true, completion: nil)
             clickedAlertMessege = true
 
-        }
+        }   //END OF ELSE IF PASSWORDS DON'T MATCH
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
 }

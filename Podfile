@@ -10,6 +10,7 @@ target 'AllTheWage' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'	 
 	pod 'Firebase/Storage'
+	pod 'Plaid'
   target 'AllTheWageTests' do
     inherit! :search_paths
     # Pods for testing

@@ -34,6 +34,7 @@
 		B9C949741FA8086400C1AAFD /* EmployeeSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C949731FA8086400C1AAFD /* EmployeeSignUpView.swift */; };
 		B9C949761FA808DA00C1AAFD /* MainPageContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C949751FA808DA00C1AAFD /* MainPageContoller.swift */; };
 		B9C949781FA80FDB00C1AAFD /* PayCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C949771FA80FDB00C1AAFD /* PayCheckViewController.swift */; };
+		B9F696CF1FB0AC92008A21DF /* AddNewBankAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F696CE1FB0AC92008A21DF /* AddNewBankAccountView.swift */; };
 		CF57018E1D7B07F321139D5B /* Pods_AllTheWage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA32937F221D21D8EC9F96 /* Pods_AllTheWage.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		B9C949731FA8086400C1AAFD /* EmployeeSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSignUpView.swift; sourceTree = "<group>"; };
 		B9C949751FA808DA00C1AAFD /* MainPageContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageContoller.swift; sourceTree = "<group>"; };
 		B9C949771FA80FDB00C1AAFD /* PayCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCheckViewController.swift; sourceTree = "<group>"; };
+		B9F696CE1FB0AC92008A21DF /* AddNewBankAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBankAccountView.swift; sourceTree = "<group>"; };
 		BC2116985774D72C44AA6A58 /* Pods-AllTheWage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage.debug.xcconfig"; sourceTree = "<group>"; };
 		C09993EC89285E33DD2447E1 /* Pods-AllTheWageUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWageUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWageUITests/Pods-AllTheWageUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3BC98BA5BD2F2821707C499 /* Pods-AllTheWageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWageTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWageTests/Pods-AllTheWageTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				B94295261F8D299D00F72AD4 /* PayRateTabView.swift */,
 				B94295241F8D296F00F72AD4 /* ForumTabView.swift */,
 				B94295281F8D29CA00F72AD4 /* HoursTabView.swift */,
+				B9F696CE1FB0AC92008A21DF /* AddNewBankAccountView.swift */,
 			);
 			path = "Employer Side";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				B94294E71F8D1D7200F72AD4 /* Resources */,
 				1385D541CF439101A1772BB4 /* [CP] Embed Pods Frameworks */,
 				322DE771B72CE1DC83293BC8 /* [CP] Copy Pods Resources */,
+				B9F696D01FB0C419008A21DF /* Prepare For Distribution */,
 			);
 			buildRules = (
 			);
@@ -403,12 +407,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/Plaid/ios/LinkKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinkKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +484,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B9F696D01FB0C419008A21DF /* Prepare For Distribution */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare For Distribution";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LINK_ROOT=${PODS_ROOT:+$PODS_ROOT/Plaid/ios}\ncp \"${LINK_ROOT:-$PROJECT_DIR}\"/LinkKit.framework/prepare_for_distribution.sh \"${CODESIGNING_FOLDER_PATH}\"/Frameworks/LinkKit.framework/prepare_for_distribution.sh\n\"${CODESIGNING_FOLDER_PATH}\"/Frameworks/LinkKit.framework/prepare_for_distribution.sh";
 		};
 		D5FF87F7EBB44CACDF6FA09B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -562,6 +582,7 @@
 				B94D0BFB1F8D3A610093DA8E /* FirstScreenView.swift in Sources */,
 				B94295211F8D292C00F72AD4 /* PaycheckTabView.swift in Sources */,
 				B97603241F96846E00F00B6D /* InBetweenLoginViewController.swift in Sources */,
+				B9F696CF1FB0AC92008A21DF /* AddNewBankAccountView.swift in Sources */,
 				B942951F1F8D28E500F72AD4 /* EmployeeTabView.swift in Sources */,
 				B94295251F8D296F00F72AD4 /* ForumTabView.swift in Sources */,
 				B942951D1F8D1EEE00F72AD4 /* SWRevealViewController.m in Sources */,

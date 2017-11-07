@@ -2,6 +2,8 @@
 //  EmployerLoginView.swift
 //  AllTheWage
 //
+//  Description: Login Screen for Employer
+//
 //  Created by Andres Ibarra on 10/10/17.
 //  Copyright © 2017 Andres Ibarra. All rights reserved.
 //
@@ -12,58 +14,77 @@ import Firebase
 
 class EmployerLoginView: UIViewController, UITextFieldDelegate  {
     
-    //DATABASE
-    var ref = Database.database().reference()
+   
+    var ref = Database.database().reference()  // DATABASE REF TO ALLOW US TO ACCESS IT
     
-    //ALERTS
+    // DESCRIPTION:
+    // ALERT VARIABLES
+    // this will allow us to display an alert when something goes wrong and can't log in
     let alert = UIAlertController(title: "Error", message: "Could Not login, Email or Password could not be found", preferredStyle: UIAlertControllerStyle.alert)
     var clickedAlertMessege = false
+    
+    // DESCRIPTION:
+    // ACTIVITY INDICATOR
+    // loading circle that won't let the user think that the application crashed while it loads
     var loginIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     
-    
-    //TEXTFIELDS
+    // DESCRIPTION:
+    // TEXTFIELDS VARIABLES
+    // these are the textfields that appear and this is where we can grab the information
     @IBOutlet var EmailTextFieldInformation: UITextField!
     @IBOutlet var PasswordTextFieldInformation: UITextField!
     
-    //CHECKER VARIABLES
+    // DESCRIPTION:
+    // CHECKER VARIABLES
+    // these are the variables that will contain the read in information from the textfields 
     var emailchecker: String!
     var passchecker: String!
     
     
+    // DESCRIPTION:
+    // Called when the view loads up but before the view is displayed
+    // We will do all of our set up here
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.PasswordTextFieldInformation.delegate = self;
-        // Do any additional setup after loading the view.
+        self.PasswordTextFieldInformation.delegate = self;  //delegating the textfields to allow the
+                                                            //implementation of func textFieldShouldReturn()
+        
     }
     
+    // DESCRIPTION:
+    // Called when the editing is done on a textfield
+    // and the return button is clicked to remove the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
-
+    // DESCRIPTION:
+    // User has entered in his/her information and we will now
+    // attempt to login user
     @IBAction func ClickedLogin(_ sender: Any) {
-        //show the loginindicator so that user doesn't think it froze
+        
+        // DESCRIPTION:
+        // show the loginindicator so that user doesn't think the application froze
         loginIndicator.center = self.view.center
         loginIndicator.hidesWhenStopped = true
         loginIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         view.addSubview(loginIndicator)
-        
         loginIndicator.startAnimating()
         
         //Getting the information from the textfields that the user inputted
         emailchecker = EmailTextFieldInformation.text
         passchecker = PasswordTextFieldInformation.text
-    
+
+        // DESCRIPTION:
+        // Called to sign in the user to Firebase Auth
+        // will also handle in case user cannot be logged in
         Auth.auth().signIn(withEmail: emailchecker, password: passchecker){ (user, error) in
             if error == nil {
-                    //preform segue
-                 self.loginIndicator.stopAnimating() //stopping it to move into the next view
+                    //perform segue
+                self.loginIndicator.stopAnimating() //stopping it to move into the next view
+                
                 self.performSegue(withIdentifier: "logedIn", sender: nil)
                 } else{
                 print("cannot sign in user")
@@ -73,14 +94,16 @@ class EmployerLoginView: UIViewController, UITextFieldDelegate  {
                 self.present(self.alert, animated: true, completion: nil)
                 self.clickedAlertMessege = true
                 
-                self.loginIndicator.stopAnimating() //stopping it to move into the next view
+                self.loginIndicator.stopAnimating() //stopping it show user we are no longer loading
             }
 
         }
         
     }
     
-    
+    // DESCRIPTION:
+    // This function is here simply to allow us to properly exit
+    // child views without messing up the navigation of the application
     @IBAction func backTologin(unwindSegue: UIStoryboardSegue) {
         
     }
