@@ -23,13 +23,13 @@ class FirstScreenView: UIViewController {
         
         // DESCRIPTION:
         // do try catch block to catch any errors in case we are not able to sign out a user
-        do{
-            try Auth.auth().signOut()
-        }
-        catch let error as NSError {
-            print("COULD NOT SIGN OUT")
-            print(error.localizedDescription)
-        }
+//        do{
+//            try Auth.auth().signOut()
+//        }
+//        catch let error as NSError {
+//            print("COULD NOT SIGN OUT")
+//            print(error.localizedDescription)
+//        }
         
         // DESCRIPTION:
         // clearing the employee names arrat to make sure that we don't have an

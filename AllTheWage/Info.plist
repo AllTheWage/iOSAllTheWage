@@ -55,5 +55,21 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>PLKPlaidLinkConfiguration</key>
+	<dict>
+		<key>apiVersion</key>
+		<string>APIv2</string>
+		<key>clientName</key>
+		<string>$(PRODUCT_NAME)</string>
+		<key>key</key>
+		<string>0a8665a68e9bc1e02edf51aea606fe</string>
+		<key>env</key>
+		<string>Development</string>
+		<key>product</key>
+		<array>
+			<string>auth</string>
+			<string>transactions</string>
+		</array>
+	</dict>
 </dict>
 </plist>

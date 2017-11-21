@@ -27,6 +27,7 @@
 		B94295291F8D29CA00F72AD4 /* HoursTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94295281F8D29CA00F72AD4 /* HoursTabView.swift */; };
 		B94D0BFB1F8D3A610093DA8E /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D0BFA1F8D3A610093DA8E /* FirstScreenView.swift */; };
 		B94D0BFD1F8D411D0093DA8E /* EmployerLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D0BFC1F8D411D0093DA8E /* EmployerLoginView.swift */; };
+		B953FB721FB360250014A270 /* RequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B953FB711FB360250014A270 /* RequestsView.swift */; };
 		B95B820D1FA80169008EC39C /* EmployeeLoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B820C1FA80169008EC39C /* EmployeeLoginScreen.swift */; };
 		B97603241F96846E00F00B6D /* InBetweenLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97603231F96846E00F00B6D /* InBetweenLoginViewController.swift */; };
 		B98377311F8F187A0044B844 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98377301F8F187A0044B844 /* MapKit.framework */; };
@@ -87,6 +88,7 @@
 		B94295281F8D29CA00F72AD4 /* HoursTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoursTabView.swift; sourceTree = "<group>"; };
 		B94D0BFA1F8D3A610093DA8E /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
 		B94D0BFC1F8D411D0093DA8E /* EmployerLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployerLoginView.swift; sourceTree = "<group>"; };
+		B953FB711FB360250014A270 /* RequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsView.swift; sourceTree = "<group>"; };
 		B95B820C1FA80169008EC39C /* EmployeeLoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeLoginScreen.swift; sourceTree = "<group>"; };
 		B97603231F96846E00F00B6D /* InBetweenLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InBetweenLoginViewController.swift; sourceTree = "<group>"; };
 		B98377301F8F187A0044B844 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -174,6 +176,7 @@
 				B94294EC1F8D1D7200F72AD4 /* AppDelegate.swift */,
 				B94D0BF61F8D38BC0093DA8E /* Employer Side */,
 				B94294F01F8D1D7200F72AD4 /* Main.storyboard */,
+				B959EB231FB94C7A00DAF436 /* RequestCustomCell */,
 				B94294F31F8D1D7200F72AD4 /* Assets.xcassets */,
 				B94294F51F8D1D7200F72AD4 /* LaunchScreen.storyboard */,
 				B94294F81F8D1D7200F72AD4 /* Info.plist */,
@@ -223,6 +226,7 @@
 			children = (
 				B9C949751FA808DA00C1AAFD /* MainPageContoller.swift */,
 				B9C949771FA80FDB00C1AAFD /* PayCheckViewController.swift */,
+				B953FB711FB360250014A270 /* RequestsView.swift */,
 			);
 			path = "Employee Side";
 			sourceTree = "<group>";
@@ -238,6 +242,13 @@
 				B9C949731FA8086400C1AAFD /* EmployeeSignUpView.swift */,
 			);
 			path = "Login Screens";
+			sourceTree = "<group>";
+		};
+		B959EB231FB94C7A00DAF436 /* RequestCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RequestCustomCell;
 			sourceTree = "<group>";
 		};
 		B983772F1F8F187A0044B844 /* Frameworks */ = {
@@ -323,6 +334,10 @@
 		B94294E11F8D1D7200F72AD4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					reasonsForAbsence,
+				);
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Andres Ibarra";
@@ -588,6 +603,7 @@
 				B942951D1F8D1EEE00F72AD4 /* SWRevealViewController.m in Sources */,
 				B95B820D1FA80169008EC39C /* EmployeeLoginScreen.swift in Sources */,
 				B9C949741FA8086400C1AAFD /* EmployeeSignUpView.swift in Sources */,
+				B953FB721FB360250014A270 /* RequestsView.swift in Sources */,
 				B94295231F8D293E00F72AD4 /* HelpTabView.swift in Sources */,
 				B9C949761FA808DA00C1AAFD /* MainPageContoller.swift in Sources */,
 				B94295271F8D299D00F72AD4 /* PayRateTabView.swift in Sources */,

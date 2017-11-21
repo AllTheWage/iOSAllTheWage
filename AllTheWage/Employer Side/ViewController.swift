@@ -12,7 +12,21 @@ import Foundation
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class RequestCustomCell : UITableViewCell {
+    
+    @IBOutlet var cellEmployeeName: UILabel! = UILabel()
+    @IBOutlet var cellRequestReason: UILabel! = UILabel()
+    @IBOutlet var cellShift: UILabel!  = UILabel()
+    @IBOutlet var cellDescription: UITextView!  = UITextView()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
+
+
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var requests = ["First Request", "Second Request", "Third Request"]
     
     
     var ref = Database.database().reference() // DATABASE REF TO ALLOW US TO ACCESS IT
@@ -30,6 +44,10 @@ class ViewController: UIViewController {
         var name: String!
         
         super.viewDidLoad()
+        
+        RequestsTableView.register(RequestCustomCell.self, forCellReuseIdentifier: "CustomCell")
+        self.RequestsTableView.delegate = self
+        self.RequestsTableView.dataSource = self
         
         //HIDING BACK BUTTON SO THAT CUSTOM NAVIGATION BUTTON ISN'T COVERED
         navigationItem.hidesBackButton = true
@@ -66,15 +84,45 @@ class ViewController: UIViewController {
      
         })//END OF FUNCTION TO NUMBER OF EMPLOYEES
         
+//        ref.child("REQUESTS").child("Companies").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with:{ (snapshot) in
+//
+//
+//
+//        })
+        
         //adding rounded corners to the table view that handles all the requests in the main page
         RequestsTableView.layer.cornerRadius = 15
         RequestsTableView.layer.masksToBounds = true
         
-        
+        RequestsTableView.reloadData()
         
     }
     
+  
+    //NEED TO FIX THIS!!!!!
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return requests.count
+    }
 
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = RequestCustomCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! RequestCustomCell
+        cell.cellEmployeeName.text = "TEST"
+        cell.cellShift.text = "9:00-5:00"
+        cell.cellRequestReason.text = "Sick"
+        cell.cellDescription.text = "Another Description"
+        
+        return cell
+    }
+    
+    
 }
+
+
+
+
 
