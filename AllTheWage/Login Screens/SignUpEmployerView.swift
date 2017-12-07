@@ -111,9 +111,9 @@ class SignUpEmployerView: UIViewController, UITextFieldDelegate {
                             self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Name").setValue("")
                             self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Email").setValue("")
                             self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Phone Number").setValue("")
-                            self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Age").setValue(0)
+                            self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Age").setValue("0")
                             self.ref.child("EMPLOYERS").child("Companies").child(user!.uid).child(self.companyname).child("eID").child("Social Security").setValue("")
-                            
+                                self.ref.child("BANKS").child(user!.uid).child(self.companyname).child("Has Bank").setValue(0)
                             
                             self.ableToLoginAfterSignup = true
                         }

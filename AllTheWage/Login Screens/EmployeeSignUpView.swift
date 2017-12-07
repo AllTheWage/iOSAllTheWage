@@ -142,7 +142,7 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
                             self.ref.child("EMPLOYEES").child(String(self.employerName)).child(user!.uid).child("Paycheck Amount").setValue(2000)
                             self.ref.child("EMPLOYEES").child(String(self.employerName)).child(user!.uid).child("Name").setValue(self.name)
                             self.ref.child("EMPLOYEES").child(String(self.employerName)).child(user!.uid).child("Hours Worked").setValue(0)
-                            self.ref.child("EMPLOYEES").child(String(self.employerName)).child(user!.uid).child("Pay Rate").setValue("H10")
+                            self.ref.child("EMPLOYEES").child(String(self.employerName)).child(user!.uid).child("Pay Rate").setValue(0)
                             
                             //ADDING EMPLOYEE TO EMPLOYER SIDE
                             self.ref.child("EMPLOYERS").child("Companies").observeSingleEvent(of: .value, with: {(snapshot) in
@@ -165,7 +165,7 @@ class EmployeeSignUpView: UIViewController ,UITextFieldDelegate {
                                  self.ref.child("EMPLOYERS").child("Companies").child(self.employerID).child(self.employerName).child(user!.uid).child("Name").setValue(self.name)
                                  
                                  //AGE
-                                 self.ref.child("EMPLOYERS").child("Companies").child(self.employerID).child(self.employerName).child(user!.uid).child("Age").setValue(Int(self.age))
+                                 self.ref.child("EMPLOYERS").child("Companies").child(self.employerID).child(self.employerName).child(user!.uid).child("Age").setValue(String(self.age))
                                  //EMAIL
                                  self.ref.child("EMPLOYERS").child("Companies").child(self.employerID).child(self.employerName).child(user!.uid).child("Email").setValue(self.Email)
                                  //Phone Number

@@ -12,6 +12,8 @@
 import UIKit
 import Firebase
 
+var GlobalEmployeeName = " "
+
 class MainPageContoller: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
 
@@ -73,12 +75,9 @@ class MainPageContoller: UIViewController, UITextFieldDelegate, UITextViewDelega
             let allCompanyNames = snapshot.children.allObjects as! [DataSnapshot]
             
             for cnames in allCompanyNames {
-                let userIDs = cnames.children.allObjects as! [DataSnapshot]
                 
                 for userIDs in cnames.children.allObjects as! [DataSnapshot] {
-                    print("USER IDS")
-                    print(userIDs.key)
-                    print(Auth.auth().currentUser!.uid)
+                    
                     if userIDs.key == Auth.auth().currentUser!.uid {
                         GlobalCompanyName = allCompanyNames[indexer].key
                         break
@@ -94,6 +93,7 @@ class MainPageContoller: UIViewController, UITextFieldDelegate, UITextViewDelega
             self.ref.child("EMPLOYEES").child(String(GlobalCompanyName)).child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value, with:{ (snapshot) in
                 let allinformation = snapshot.children.allObjects as! [DataSnapshot]
                 let name = allinformation[2].value as! String
+                GlobalEmployeeName = name
                 self.welcomeMessageLabel.text = "Welcome, " + String(name)
                 }) // END OF GRABBING EMPLOYEE NAME
  
@@ -107,15 +107,13 @@ class MainPageContoller: UIViewController, UITextFieldDelegate, UITextViewDelega
         if textField.tag == 1{
             //REASONS TEXTFIELD
               moveTextField(textField: textField, distance: 120, up: false)
-            
+        
         }
         else if textField.tag == 2{
             //SHIFT TEXTFIELD
             moveTextField(textField: textField, distance: 130, up: false)
         }
     }
-  
-    
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -188,6 +186,7 @@ class MainPageContoller: UIViewController, UITextFieldDelegate, UITextViewDelega
                 ref.child("REQUESTS").child(GlobalCompanyName).child(Auth.auth().currentUser!.uid).child("Reason").setValue(reasonwhy)
                 ref.child("REQUESTS").child(GlobalCompanyName).child(Auth.auth().currentUser!.uid).child("Shift").setValue(shift)
                 ref.child("REQUESTS").child(GlobalCompanyName).child(Auth.auth().currentUser!.uid).child("Extra Information").setValue(description)
+                ref.child("REQUESTS").child(GlobalCompanyName).child(Auth.auth().currentUser!.uid).child("Employee Name").setValue(GlobalEmployeeName)
                     
                     let alert = UIAlertController(title: "Success", message: "Request has been added", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default))
@@ -199,6 +198,7 @@ class MainPageContoller: UIViewController, UITextFieldDelegate, UITextViewDelega
                 }
                 else{
                 ref.child("REQUESTS").child(GlobalCompanyName).child(Auth.auth().currentUser!.uid).child("Reason").setValue(reasonwhy)
+                ref.child("REQUESTS").child(GlobalCompanyName).child(Auth.auth().currentUser!.uid).child("Employee Name").setValue(GlobalEmployeeName)
                 ref.child("REQUESTS").child(GlobalCompanyName).child(Auth.auth().currentUser!.uid).child("Shift").setValue(shift)
                 ref.child("REQUESTS").child(GlobalCompanyName).child(Auth.auth().currentUser!.uid).child("Extra Information").setValue(" ")
                     

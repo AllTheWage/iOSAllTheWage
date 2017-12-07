@@ -103,7 +103,7 @@ class EmployeeTabView: UIViewController, UITableViewDelegate, UITableViewDataSou
         EmployeesTabOpenButton.target = self.revealViewController()
         EmployeesTabOpenButton.action = #selector(SWRevealViewController.revealToggle(_:))
         
-        //stoping the loginIndicator
+        //stoping the loadingIndicator
         loadingIndicator.stopAnimating()
         
     }
@@ -122,7 +122,7 @@ class EmployeeTabView: UIViewController, UITableViewDelegate, UITableViewDataSou
             clickedToClose = true
         } else {
              employeeNameTable.layer.isHidden = true
-            employeeInformationTextView.layer.isHidden = true
+             employeeInformationTextView.layer.isHidden = true
              clickedToClose = false
         }
   
@@ -154,7 +154,7 @@ class EmployeeTabView: UIViewController, UITableViewDelegate, UITableViewDataSou
             let nextChild = snapshot.children.allObjects as! [DataSnapshot]
             var requestedInformation = nextChild[arrayLocation].children.allObjects as! [DataSnapshot]
         
-            let e_age = requestedInformation[0].value as! Int
+            let e_age = requestedInformation[0].value as! String
             let e_email = requestedInformation[1].value as! String
             let e_phoneNumber = requestedInformation[3].value as! String
         
