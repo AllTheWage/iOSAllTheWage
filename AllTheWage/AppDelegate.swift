@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Stripe
 
 var GlobalCompanyName = " " //global company name to be accessed anywhere
                             //in the application so that it facilitates database access
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Override point for customization after application launch.
         //configure firebase to use in application
         FirebaseApp.configure()
+        STPPaymentConfiguration.shared().publishableKey = "pk_live_WiLAsLndUeHcTGtPNbVd95Pp"
        
         return true
     }

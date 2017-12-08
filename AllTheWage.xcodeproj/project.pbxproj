@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F310448BFD3A4DE920CD028 /* Pods_AllTheWageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558158DA4B9A1BFF3CBF7A14 /* Pods_AllTheWageTests.framework */; };
-		B215C836AC61C2CC089F465D /* Pods_AllTheWageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB99E8E2315DF3496E906C9 /* Pods_AllTheWageUITests.framework */; };
+		38A056821137DB305932F4CF /* Pods_AllTheWage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12D96859230D884CDE62D14 /* Pods_AllTheWage.framework */; };
+		A73F546F366EE542E4FB7061 /* Pods_AllTheWageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B6F3ED36C54DE0452E293F /* Pods_AllTheWageTests.framework */; };
+		B23B7236CFFE069C43030153 /* Pods_AllTheWageUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A18AE1B9C8D5922D0904959 /* Pods_AllTheWageUITests.framework */; };
 		B903D47C1F95066A00AFF78F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B903D47B1F95040D00AFF78F /* GoogleService-Info.plist */; };
 		B927870D1F992A3800D1E82E /* AddNewEmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B927870C1F992A3800D1E82E /* AddNewEmployeeView.swift */; };
 		B938E5121FD65D5A0074E132 /* RequestCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938E5111FD65D5A0074E132 /* RequestCustomCell.swift */; };
@@ -33,10 +34,10 @@
 		B97603241F96846E00F00B6D /* InBetweenLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97603231F96846E00F00B6D /* InBetweenLoginViewController.swift */; };
 		B98377311F8F187A0044B844 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98377301F8F187A0044B844 /* MapKit.framework */; };
 		B9ACAEE01F950C7C0093E7B7 /* SignUpEmployerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACAEDF1F950C7C0093E7B7 /* SignUpEmployerView.swift */; };
+		B9C8CCF61FD9E3B900140F47 /* MyApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C8CCF51FD9E3B900140F47 /* MyApiClient.swift */; };
 		B9C949741FA8086400C1AAFD /* EmployeeSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C949731FA8086400C1AAFD /* EmployeeSignUpView.swift */; };
 		B9C949761FA808DA00C1AAFD /* MainPageContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C949751FA808DA00C1AAFD /* MainPageContoller.swift */; };
 		B9C949781FA80FDB00C1AAFD /* PayCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C949771FA80FDB00C1AAFD /* PayCheckViewController.swift */; };
-		CF57018E1D7B07F321139D5B /* Pods_AllTheWage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA32937F221D21D8EC9F96 /* Pods_AllTheWage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24CA32937F221D21D8EC9F96 /* Pods_AllTheWage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CB99E8E2315DF3496E906C9 /* Pods_AllTheWageUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWageUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		558158DA4B9A1BFF3CBF7A14 /* Pods_AllTheWageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A18AE1B9C8D5922D0904959 /* Pods_AllTheWageUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWageUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DD24C9B4C3D61B48368507D /* Pods-AllTheWage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWage.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage.release.xcconfig"; sourceTree = "<group>"; };
+		91B6F3ED36C54DE0452E293F /* Pods_AllTheWageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A0D6890F3A012D1FC2AE19 /* Pods-AllTheWageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTheWageTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AllTheWageTests/Pods-AllTheWageTests.release.xcconfig"; sourceTree = "<group>"; };
+		B12D96859230D884CDE62D14 /* Pods_AllTheWage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTheWage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B903D47B1F95040D00AFF78F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B927870C1F992A3800D1E82E /* AddNewEmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEmployeeView.swift; sourceTree = "<group>"; };
 		B938E5111FD65D5A0074E132 /* RequestCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCustomCell.swift; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		B97603231F96846E00F00B6D /* InBetweenLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InBetweenLoginViewController.swift; sourceTree = "<group>"; };
 		B98377301F8F187A0044B844 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B9ACAEDF1F950C7C0093E7B7 /* SignUpEmployerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEmployerView.swift; sourceTree = "<group>"; };
+		B9C8CCF51FD9E3B900140F47 /* MyApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiClient.swift; sourceTree = "<group>"; };
 		B9C949731FA8086400C1AAFD /* EmployeeSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSignUpView.swift; sourceTree = "<group>"; };
 		B9C949751FA808DA00C1AAFD /* MainPageContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageContoller.swift; sourceTree = "<group>"; };
 		B9C949771FA80FDB00C1AAFD /* PayCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCheckViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98377311F8F187A0044B844 /* MapKit.framework in Frameworks */,
-				CF57018E1D7B07F321139D5B /* Pods_AllTheWage.framework in Frameworks */,
+				38A056821137DB305932F4CF /* Pods_AllTheWage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F310448BFD3A4DE920CD028 /* Pods_AllTheWageTests.framework in Frameworks */,
+				A73F546F366EE542E4FB7061 /* Pods_AllTheWageTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B215C836AC61C2CC089F465D /* Pods_AllTheWageUITests.framework in Frameworks */,
+				B23B7236CFFE069C43030153 /* Pods_AllTheWageUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +184,7 @@
 				B942951B1F8D1EEE00F72AD4 /* SWRevealViewController.h */,
 				B942951C1F8D1EEE00F72AD4 /* SWRevealViewController.m */,
 				B942951A1F8D1EEE00F72AD4 /* AllTheWage-Bridging-Header.h */,
+				B9C8CCF51FD9E3B900140F47 /* MyApiClient.swift */,
 			);
 			path = AllTheWage;
 			sourceTree = "<group>";
@@ -247,9 +250,9 @@
 			isa = PBXGroup;
 			children = (
 				B98377301F8F187A0044B844 /* MapKit.framework */,
-				24CA32937F221D21D8EC9F96 /* Pods_AllTheWage.framework */,
-				558158DA4B9A1BFF3CBF7A14 /* Pods_AllTheWageTests.framework */,
-				4CB99E8E2315DF3496E906C9 /* Pods_AllTheWageUITests.framework */,
+				B12D96859230D884CDE62D14 /* Pods_AllTheWage.framework */,
+				91B6F3ED36C54DE0452E293F /* Pods_AllTheWageTests.framework */,
+				1A18AE1B9C8D5922D0904959 /* Pods_AllTheWageUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -339,6 +342,9 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -412,16 +418,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${PODS_ROOT}/Plaid/ios/LinkKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinkKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,9 +447,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AllTheWage/Pods-AllTheWage-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Stripe/Stripe.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -579,6 +594,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C8CCF61FD9E3B900140F47 /* MyApiClient.swift in Sources */,
 				B94294EF1F8D1D7200F72AD4 /* ViewController.swift in Sources */,
 				B927870D1F992A3800D1E82E /* AddNewEmployeeView.swift in Sources */,
 				B9ACAEE01F950C7C0093E7B7 /* SignUpEmployerView.swift in Sources */,

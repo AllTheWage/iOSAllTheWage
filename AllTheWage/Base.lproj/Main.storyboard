@@ -218,7 +218,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No Bank Yet      " translatesAutoresizingMaskIntoConstraints="NO" id="iud-7P-z0Q">
-                                <rect key="frame" x="16" y="103" width="343" height="110"/>
+                                <rect key="frame" x="16" y="88" width="343" height="139"/>
                                 <color key="textColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -286,11 +286,11 @@
                             <constraint firstItem="vFH-Vf-5o7" firstAttribute="leading" secondItem="iud-7P-z0Q" secondAttribute="leading" id="859-av-E1r"/>
                             <constraint firstItem="Omk-5N-ZS9" firstAttribute="trailing" secondItem="5bY-a6-K5M" secondAttribute="trailing" id="8fq-WL-lmZ"/>
                             <constraint firstItem="2vt-mC-p8s" firstAttribute="trailing" secondItem="iud-7P-z0Q" secondAttribute="trailing" id="AJz-6u-pQh"/>
-                            <constraint firstItem="iud-7P-z0Q" firstAttribute="top" secondItem="5bY-a6-K5M" secondAttribute="top" constant="15" id="DqP-UH-nHR"/>
+                            <constraint firstItem="iud-7P-z0Q" firstAttribute="top" secondItem="5bY-a6-K5M" secondAttribute="top" id="DqP-UH-nHR"/>
                             <constraint firstItem="Omk-5N-ZS9" firstAttribute="top" secondItem="cuJ-Pd-nFN" secondAttribute="top" id="H4k-CD-wSU"/>
                             <constraint firstAttribute="bottom" secondItem="Omk-5N-ZS9" secondAttribute="bottom" id="ICw-hx-lWE"/>
                             <constraint firstItem="vFH-Vf-5o7" firstAttribute="leading" secondItem="2vt-mC-p8s" secondAttribute="leading" id="M5Z-wM-g18"/>
-                            <constraint firstItem="5bY-a6-K5M" firstAttribute="bottom" secondItem="iud-7P-z0Q" secondAttribute="bottom" constant="565" id="PFS-CZ-a5W"/>
+                            <constraint firstItem="5bY-a6-K5M" firstAttribute="bottom" secondItem="iud-7P-z0Q" secondAttribute="bottom" constant="551" id="PFS-CZ-a5W"/>
                             <constraint firstItem="kBx-15-QIN" firstAttribute="baseline" secondItem="vFH-Vf-5o7" secondAttribute="baseline" id="PFZ-nf-zaq"/>
                             <constraint firstItem="iud-7P-z0Q" firstAttribute="leading" secondItem="cuJ-Pd-nFN" secondAttribute="leadingMargin" id="PLP-F2-i20"/>
                             <constraint firstItem="5bY-a6-K5M" firstAttribute="bottom" secondItem="oNN-YQ-CHj" secondAttribute="bottom" constant="19" id="QDB-RO-LIX"/>
@@ -305,7 +305,7 @@
                             <constraint firstItem="Omk-5N-ZS9" firstAttribute="leading" secondItem="cuJ-Pd-nFN" secondAttribute="leading" id="omA-Oh-Zjd"/>
                             <constraint firstItem="Omk-5N-ZS9" firstAttribute="leading" secondItem="cuJ-Pd-nFN" secondAttribute="leading" id="pDl-F0-2uT"/>
                             <constraint firstItem="oNN-YQ-CHj" firstAttribute="top" secondItem="2vt-mC-p8s" secondAttribute="bottom" constant="8" id="qeh-Et-mlx"/>
-                            <constraint firstItem="vFH-Vf-5o7" firstAttribute="top" secondItem="iud-7P-z0Q" secondAttribute="bottom" constant="22" id="sA0-7W-3ay"/>
+                            <constraint firstItem="vFH-Vf-5o7" firstAttribute="top" secondItem="iud-7P-z0Q" secondAttribute="bottom" constant="8" id="sA0-7W-3ay"/>
                             <constraint firstItem="Omk-5N-ZS9" firstAttribute="top" secondItem="cuJ-Pd-nFN" secondAttribute="top" id="vXo-Iv-dUX"/>
                             <constraint firstAttribute="trailing" secondItem="Omk-5N-ZS9" secondAttribute="trailing" id="w9M-s3-Rt5"/>
                             <constraint firstItem="5bY-a6-K5M" firstAttribute="trailing" secondItem="vFH-Vf-5o7" secondAttribute="trailing" constant="193" id="wVx-TF-dvX"/>

@@ -12,6 +12,8 @@
 import UIKit
 import WebKit
 import Firebase
+import Stripe
+import Alamofire
 
 var haveABank = false
 var bankInformation:[String:String] = ["Bank Name":" ","Bank Account Number": " ","Account Number": " ","Balance Available": " ","Account Name": " "]
@@ -19,6 +21,7 @@ var bankInformation:[String:String] = ["Bank Name":" ","Bank Account Number": " 
 class PaycheckTabView: UIViewController, UITextViewDelegate, WKNavigationDelegate, UITableViewDelegate, UITableViewDataSource {
     
     let webView = WKWebView()
+    //let paymentCardTextField = STPPaymentCardTextField()
     var clickedToClose = false
     var ref = Database.database().reference()
 
@@ -30,6 +33,9 @@ class PaycheckTabView: UIViewController, UITextViewDelegate, WKNavigationDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //paymentCardTextField.delegate = self
+        //self.view.addSubview(paymentCardTextField)
         
         bankInformationDisplay.delegate = self
         //we need to add these two statements to allow for the
@@ -157,9 +163,10 @@ class PaycheckTabView: UIViewController, UITextViewDelegate, WKNavigationDelegat
                 }
                 // Close the webview
                 haveABank = true
-            self.webView.removeFromSuperview()
+                self.webView.removeFromSuperview()
                 displayInformation();
-            self.navigationController?.isNavigationBarHidden = false
+                //showDropIn(clientTokenOrTokenizationKey: queryParams["public_token"]!)
+                self.navigationController?.isNavigationBarHidden = false
                 break
                 
             case "exit"?:
@@ -176,6 +183,7 @@ class PaycheckTabView: UIViewController, UITextViewDelegate, WKNavigationDelegat
                 // the Link flow.
                 print("Link request ID: \(String(describing: queryParams["link_request_id"]))");
                 print("Plaid API request ID: \(String(describing: queryParams["link_request_id"]))");
+                
                 self.webView.removeFromSuperview()
                 self.navigationController?.isNavigationBarHidden = false
                 break
@@ -208,18 +216,24 @@ class PaycheckTabView: UIViewController, UITextViewDelegate, WKNavigationDelegat
     
     
     @IBAction func clickedAddNewBank(_ sender: Any){
+
         self.navigationController?.isNavigationBarHidden = true;
         let linkUrl = generateLinkInitializationURL()
         let url = URL(string: linkUrl)
         let request = URLRequest(url: url!)
-        
+
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = false
-        
+
         webView.frame = view.frame
         webView.scrollView.bounces = false
         self.view.addSubview(webView)
+
         webView.load(request)
+
+       //handleAddPaymentMethodButtonTapped()
+       
+        
     }
     //display bank information
     func displayInformation(){
@@ -310,9 +324,105 @@ class PaycheckTabView: UIViewController, UITextViewDelegate, WKNavigationDelegat
     ///////////////////////////////////////////////////////////////////////
     // END OF TABLEVIEW FUNCTIONS
     ///////////////////////////////////////////////////////////////////////
-    
-    
  
+    
 }
 
+//
+//  STRIPE IMPLEMENTATION
+//
+/*
+extension PaycheckTabView: STPPaymentContextDelegate, STPPaymentCardTextFieldDelegate, STPAddCardViewControllerDelegate, STPPaymentMethodsViewControllerDelegate{
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
+        return
+    }
+    
+    func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
+        return
+    }
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPErrorBlock) {
+        return
+    }
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
+        return
+    }
+    
+    
+    
+    func handleAddPaymentMethodButtonTapped() {
+        // Setup add card view controller
+        let addCardViewController = STPAddCardViewController()
+        addCardViewController.delegate = self
+        
+        // Present add card view controller
+        let navigationController = UINavigationController(rootViewController: addCardViewController)
+        present(navigationController, animated: true)
+    }
+    
+    // MARK: STPAddCardViewControllerDelegate
+    
+    func addCardViewControllerDidCancel(_ addCardViewController: STPAddCardViewController) {
+        // Dismiss add card view controller
+        dismiss(animated: true)
+    }
+    
+    func addCardViewController(_ addCardViewController: STPAddCardViewController, didCreateToken token: STPToken, completion: @escaping STPErrorBlock) {
+        Alamofire(token, completion: { (error: Error?) in
+            if let error = error {
+                // Show error in add card view controller
+                completion(error)
+            }
+            else {
+                // Notify add card view controller that token creation was handled successfully
+                completion(nil)
 
+                // Dismiss add card view controller
+                dismiss(animated: true)
+            }
+        })
+    }
+    
+    func handlePaymentMethodsButtonTapped() {
+        // Setup customer context
+        let customerContext = STPCustomerContext(keyProvider: MyApiClient.sharedClient)
+        
+        // Setup payment methods view controller
+        let paymentMethodsViewController = STPPaymentMethodsViewController(configuration: STPPaymentConfiguration.shared(), theme: STPTheme.default(), customerContext: customerContext, delegate: self )
+        
+        // Present payment methods view controller
+        let navigationController = UINavigationController(rootViewController: paymentMethodsViewController)
+        present(navigationController, animated: true)
+    }
+    
+    // MARK: STPPaymentMethodsViewControllerDelegate
+    
+    func paymentMethodsViewController(_ paymentMethodsViewController: STPPaymentMethodsViewController, didFailToLoadWithError error: Error) {
+        // Dismiss payment methods view controller
+        dismiss(animated: true)
+        
+        // Present error to user...
+    }
+    
+    func paymentMethodsViewControllerDidCancel(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
+        // Dismiss payment methods view controller
+        dismiss(animated: true)
+    }
+    
+    func paymentMethodsViewControllerDidFinish(_ paymentMethodsViewController: STPPaymentMethodsViewController) {
+        // Dismiss payment methods view controller
+        dismiss(animated: true)
+    }
+    
+    func paymentMethodsViewController(_ paymentMethodsViewController: STPPaymentMethodsViewController, didSelect paymentMethod: STPPaymentMethod) {
+        // Save selected payment method
+        
+    }
+    
+    
+    
+    
+}
+*/
