@@ -7,9 +7,6 @@
 * Hour Scheduler/Maintainer
 * Pay Rate/Salary Manager
 * Location-Based Login
-* Direct Deposit
-* Employer/Employee Communication Board
-
 
 ## Coming Soon
 
