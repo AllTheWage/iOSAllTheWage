@@ -1,48 +1,43 @@
 //
-//  LoginScreen.swift
+//  SignUpView.swift
 //  AllTheWagev2
 //
-//  Created by Andres Ibarra on 5/5/18.
+//  Created by Andres Ibarra on 6/8/18.
 //  Copyright © 2018 andiba. All rights reserved.
 //
 
 import UIKit
 
-class LoginScreen: UIViewController {
+class SignUpView: UIViewController {
 
+    @IBOutlet var companyNameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var confirmPasswordTextField: UITextField!
     @IBOutlet var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         visualsSetup()
-
     }
 
 
-    @IBAction func clickedLogin(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "tabView")
-        self.present(vc!, animated: true, completion: nil)
-       
-    }
-    
-    
-    @IBAction func unwindToLogin(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-        
-    }
-    
-    
     func visualsSetup(){
-        emailTextField.layer.cornerRadius = 20.0
+        companyNameTextField.layer.cornerRadius = 25.0
+        companyNameTextField.layer.backgroundColor = #colorLiteral(red: 0, green: 0.5432093801, blue: 0.4196078431, alpha: 1)
+        emailTextField.layer.cornerRadius = 25.0
         emailTextField.layer.backgroundColor = #colorLiteral(red: 0, green: 0.5432093801, blue: 0.4196078431, alpha: 1)
-        passwordTextField.layer.cornerRadius = 20.0
+        passwordTextField.layer.cornerRadius = 25.0
         passwordTextField.layer.backgroundColor = #colorLiteral(red: 0, green: 0.5432093801, blue: 0.4196078431, alpha: 1)
-        loginButton.layer.cornerRadius = 20.0
-        loginButton.layer.backgroundColor = #colorLiteral(red: 0, green: 0.5432093801, blue: 0.4196078431, alpha: 1)
+        confirmPasswordTextField.layer.cornerRadius = 25.0
+        confirmPasswordTextField.layer.backgroundColor = #colorLiteral(red: 0, green: 0.5432093801, blue: 0.4196078431, alpha: 1)
         signUpButton.layer.cornerRadius = 20.0
         signUpButton.layer.backgroundColor = #colorLiteral(red: 0, green: 0.5432093801, blue: 0.4196078431, alpha: 1)
     }
     
+
+
 }
+
+
+

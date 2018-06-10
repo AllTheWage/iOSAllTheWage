@@ -18,6 +18,7 @@ class CustomTabBar: UITabBarController {
         
         //Set the following line to true to make it a translucent tab bar
         self.tabBar.isTranslucent = false
+        self.hidesBottomBarWhenPushed = false
 
         //This is to automatically fix colors
         //You can, of course, select any color you want

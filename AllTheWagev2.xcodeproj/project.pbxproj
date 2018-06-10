@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90C345820C9EC9100D487B2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90C345720C9EC9100D487B2 /* SettingsView.swift */; };
+		B90C345C20CB2D1D00D487B2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90C345B20CB2D1D00D487B2 /* SignUpView.swift */; };
+		B90C345E20CB77FE00D487B2 /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90C345D20CB77FE00D487B2 /* EmployeeDetailView.swift */; };
+		B90C346020CCE12C00D487B2 /* RequestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90C345F20CCE12C00D487B2 /* RequestDetailView.swift */; };
 		B91B9DEB209E3887003A9240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B9DEA209E3887003A9240 /* AppDelegate.swift */; };
 		B91B9DED209E3887003A9240 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B9DEC209E3887003A9240 /* MainView.swift */; };
 		B91B9DEF209E3887003A9240 /* EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B9DEE209E3887003A9240 /* EmployeeView.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B90C345720C9EC9100D487B2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B90C345B20CB2D1D00D487B2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		B90C345D20CB77FE00D487B2 /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
+		B90C345F20CCE12C00D487B2 /* RequestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDetailView.swift; sourceTree = "<group>"; };
 		B91B9DE7209E3887003A9240 /* AllTheWagev2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTheWagev2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91B9DEA209E3887003A9240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B91B9DEC209E3887003A9240 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -108,10 +116,14 @@
 				B91B9DEC209E3887003A9240 /* MainView.swift */,
 				B91B9DEE209E3887003A9240 /* EmployeeView.swift */,
 				B91B9DF0209E3887003A9240 /* Main.storyboard */,
+				B90C345D20CB77FE00D487B2 /* EmployeeDetailView.swift */,
+				B90C345F20CCE12C00D487B2 /* RequestDetailView.swift */,
 				B91B9E1C209E56E0003A9240 /* LoginScreen.swift */,
 				B91B9DF3209E3889003A9240 /* Assets.xcassets */,
 				B91B9DF5209E3889003A9240 /* LaunchScreen.storyboard */,
 				B91B9DF8209E3889003A9240 /* Info.plist */,
+				B90C345720C9EC9100D487B2 /* SettingsView.swift */,
+				B90C345B20CB2D1D00D487B2 /* SignUpView.swift */,
 			);
 			path = AllTheWagev2;
 			sourceTree = "<group>";
@@ -268,8 +280,12 @@
 				B91B9E1B209E3CC7003A9240 /* CustomTabBar.swift in Sources */,
 				B91B9DEF209E3887003A9240 /* EmployeeView.swift in Sources */,
 				B91B9DEB209E3887003A9240 /* AppDelegate.swift in Sources */,
+				B90C345E20CB77FE00D487B2 /* EmployeeDetailView.swift in Sources */,
+				B90C345C20CB2D1D00D487B2 /* SignUpView.swift in Sources */,
+				B90C345820C9EC9100D487B2 /* SettingsView.swift in Sources */,
 				B91B9DED209E3887003A9240 /* MainView.swift in Sources */,
 				B91B9E1D209E56E0003A9240 /* LoginScreen.swift in Sources */,
+				B90C346020CCE12C00D487B2 /* RequestDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

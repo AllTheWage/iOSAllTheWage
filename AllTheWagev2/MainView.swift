@@ -9,70 +9,67 @@
 import UIKit
 
 class MainView: UIViewController {
-
-    @IBOutlet var requestTableView: UITableView!
+    @IBOutlet var requestsTableView: UITableView!
+    var allRequests = Array< Dictionary<String, String> >()
+    var testData = ["John Smith", "John Appleseed", "Steve Jobs", "Bill Gates", "Andres Ibarra"]
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        requestTableView.delegate = self
-        requestTableView.dataSource = self
+        requestsTableView.delegate = self
+        requestsTableView.dataSource = self
         
     }
-
-
+    
+    @IBAction func unwindToRequests(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        
+    }
+    
+    
+    
 }
 
-extension MainView: UITableViewDataSource, UITableViewDelegate{
+extension MainView: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return testData.count
     }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let Hcell = tableView.dequeueReusableCell(withIdentifier: "SectionHeader") as! sectionheader
-    
-        return Hcell
-    }
-    
-    
-    
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(65)
-    }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(80)
+        return CGFloat(90)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "requestsCell") as! requestCells
-        
-        
-        cell.EmployeeName.text = "Some Name"
-        cell.desciptionText.text = "Some Text"
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "request") as! requestsCell
+        cell.employeeName.text = testData[indexPath.row]
+        cell.reasonForRequest.text = "Sick"
+        cell.dateStamp.text = "1d"
+        cell.profilePicture.layer.masksToBounds = true
         
         return cell
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "requestDetailView") as! RequestDetailView
+        
+       
+            vc.EmployeeNamePassed = testData[indexPath.row]
+        
+        self.present(vc, animated: true, completion: nil)
+        
+    }
     
+}
+
+
+class requestsCell: UITableViewCell{
+    @IBOutlet var employeeName: UILabel!
+    @IBOutlet var reasonForRequest: UILabel!
+    @IBOutlet var dateStamp: UILabel!
+    @IBOutlet var profilePicture: UIImageView!
     
     
 }
 
-class sectionheader: UITableViewCell {
 
-    @IBOutlet var requests: UILabel!
-    
-}
 
-class requestCells: UITableViewCell{
-    @IBOutlet var EmployeeName: UILabel!
-    
-    @IBOutlet var desciptionText: UILabel!
-}
+
+
